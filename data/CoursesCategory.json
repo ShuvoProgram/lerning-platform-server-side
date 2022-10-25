@@ -1,0 +1,38 @@
+[
+    {
+        "Category_id": 1,
+        "Category": "Digital Marketing",
+        "img": "https://i.ibb.co/RPvB1SD/Digital-Markting.jpg"
+    },
+    {
+        "Category_id": 2,
+        "Category": "Web Development",
+        "img": "https://i.ibb.co/jJDyRkW/Web.jpg"
+    },
+    {
+        "Category_id": 3,
+        "Category": "Content Writing",
+        "img": "https://i.ibb.co/dcCMrXv/content-writing.jpg"
+    },
+    {
+        "Category_id": 4,
+        "Category": "SEO",
+        "img": "https://i.ibb.co/YB5PJQD/SEO.jpg"
+    },
+    {
+        "Category_id": 5,
+        "Category": "Machine Learning",
+        "img": "https://i.ibb.co/72BtWXm/ML.jpg"
+    },
+    {
+        "Category_id": 6,
+        "Category": "Video Editing",
+        "img": "https://i.ibb.co/Hzn7yhy/Video-Editing.jpg"
+    }
+]
+
+
+
+
+
+

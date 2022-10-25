@@ -5,8 +5,14 @@ const cors = require('cors')
 
 app.use(cors())
 
+const category = require('./data/CoursesCategory.json')
+
 app.get('/', (req, res) => {
     res.send("Server Connected....")
+})
+
+app.get('/category', (req, res) => {
+    res.send(category);
 })
 
 app.listen(port, () => {
