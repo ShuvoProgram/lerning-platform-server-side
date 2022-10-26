@@ -16,9 +16,13 @@ app.get('/category', (req, res) => {
     res.send(category);
 })
 
-app.get('/category/:Category_id', (req, res) => {
+app.get('/categories', (req, res) => {
+    res.send(courses)
+})
+
+app.get('/categories/:Category_id', (req, res) => {
     const category_id = req.params.Category_id;
-    const selectedCategory = category.find(n => n.Category_id == category_id)
+    const selectedCategory = courses.filter(n => n.Category_id == category_id) || {}
     res.send(selectedCategory);
 })
 
@@ -26,11 +30,17 @@ app.get('/courses', (req, res) => {
     res.send(courses)
 })
 
-app.get('/courses/:Category_id', (req, res) => {
-    const course_id = req.params.Category_id;
-    const relatedCourse = courses.filter(n => n.Category_id == course_id)
+app.get('/courses/:course_id', (req, res) => {
+    const course_id = req.params.course_id;
+    const relatedCourse = courses.filter(n => n.id == course_id) || {}
     res.send(relatedCourse)
 })
+
+// app.get('/courses/:id', (req, res) => {
+//     const id = req.params.id;
+//     const course = courses.find(c => c.id === id)
+//     res.send(course)
+// })
 
 app.listen(port, () => {
     console.log(`ProForce Server On Listening Port ${port}`);
