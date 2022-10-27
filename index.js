@@ -13,26 +13,24 @@ app.get('/', (req, res) => {
     res.send("Server Connected....")
 })
 
-// app.get('/category', (req, res) => {
-//     res.send(category);
-// })
 
 app.get('/categories', (req, res) => {
     res.send(categories);
 })
 
+app.get('/categories/:id', (req, res) => {
+    const id = req.params.id;
+    if(id === "7"){
+        res.send(courses)
+    } else {
+        const selectedCategory = courses.filter(n => n.Category_id == id) || {}
+        // coursesByCategory
+        res.send(selectedCategory);
+    }
+})
+
 app.get('/courses', (req, res) => {
     res.send(courses)
-})
-// app.get('/categories', (req, res) => {
-//     res.send(courses)
-// })
-
-app.get('/categories/:Category_id', (req, res) => {
-    const category_id = req.params.Category_id;
-    const selectedCategory = courses.filter(n => n.Category_id == category_id) || {}
-    // coursesByCategory
-    res.send(selectedCategory);
 })
 
 app.get('/courses/:course_id', (req, res) => {
@@ -42,11 +40,6 @@ app.get('/courses/:course_id', (req, res) => {
     res.send(relatedCourse)
 })
 
-// app.get('/courses/:id', (req, res) => {
-//     const id = req.params.id;
-//     const course = courses.find(c => c.id === id)
-//     res.send(course)
-// })
 
 app.listen(port, () => {
     console.log(`ProForce Server On Listening Port ${port}`);

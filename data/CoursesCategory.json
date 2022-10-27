@@ -28,6 +28,11 @@
         "id": 6,
         "Category": "Video Editing",
         "img": "https://i.ibb.co/Hzn7yhy/Video-Editing.jpg"
+    },
+    {
+        "id": 7,
+        "Category": "All Categories",
+        "img": "https://i.ibb.co/Hzn7yhy/Video-Editing.jpg"
     }
 ]
 
